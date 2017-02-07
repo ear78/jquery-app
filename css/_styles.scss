@@ -1,0 +1,85 @@
+/*
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+*/
+
+// SASS VARIABLES
+$white: #fff;
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(135deg,lightseagreen, lightseagreen 40%, blue);
+    height: 100vh;
+    color: $white;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+        background: #fff;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: inline-block;
+        color: black;
+        position: relative;
+        padding: 5px;
+        text-align: center;
+        line-height: 1.2;
+    }
+}
+
+ul {
+    margin-bottom: 30px;
+    li {
+        height: 45px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        border-top: 1px solid $white;
+    }
+}
+
+#newItemButton {
+    text-align: center;
+    button {
+       width: 120px;
+       height: 40px;
+       border-radius: 2px;
+       background: none;
+       border: 2px solid #fff;
+       color: white;
+       text-transform: uppercase;
+    }
+}
+
+form {
+    text-align: center;
+    input#itemDescription {
+        height: 40px;
+        border: 1px solid $white;
+        border-radius: 3px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 100;
+        padding-left: 10px;
+        min-width: 230px;
+        background: none;
+    }
+    #add {
+        width: 80px;
+        height: 44px;
+        background: none;
+        border: 1px solid $white;
+        border-radius: 3px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+    input::-webkit-input-placeholder {
+        color: $white;
+    }
+}
