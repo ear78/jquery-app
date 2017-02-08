@@ -22,16 +22,16 @@ $(document).ready(function(){
     $newItemButton.show();
     $newItemForm.hide();
     $('#showForm').on('click', function(){
-        $newItemButton.hide();
-        $newItemForm.show();
+        $newItemButton.fadeOut('slow');
+        $newItemForm.delay(600).fadeIn('slow');
     });
 
     // ADDING A NEW LIST ITEMS
     $newItemForm.on('submit', function(e){
         e.preventDefault();
-        var text = $('input:text').val();
-        $list.append('<li>' + text + '</li>');
-        $('input:text').val('');
+        var text = $('input:text').val();// GET TEXT VALUE
+        $list.append('<li>' + text + '</li>');//APPEND LIST ITEM WITH TEXT VALUE
+        $('input:text').val('');// RESET INPUT FIELD
         updateCount();
     });
 
@@ -51,12 +51,16 @@ $(document).ready(function(){
             item = $this.text();
             $this.remove();
             $list
-                .append('<li class=\"complete\">' + item + '</li>')
-                .hide().fadeIn(3000);
+                .append('<li class=\"complete\">' + item + '<i class="material-icons">delete</i></li>')
+                .hide().fadeIn(2000);
             updateCount();
         }
     })
 
-
+    //RESET BUTTON
+    $('#resetButton').on('click', function(){
+        $('li').remove();
+        updateCount();
+    })
 
 })
