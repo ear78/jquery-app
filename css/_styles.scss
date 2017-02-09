@@ -29,7 +29,8 @@ body {
     background: #262626;
     width: 90%;
     margin: 5% auto;
-    height: 94vh;
+    min-height: 80vh;
+    padding-bottom: 5px;
 }
 
 .header-container {
@@ -70,8 +71,6 @@ body {
         position: relative;
         text-align: center;
         line-height: 1.5;
-        // font-size: .75em;
-        // vertical-align: bottom;
     }
 }
 
@@ -86,7 +85,8 @@ ul {
         justify-content: space-between;
         padding: 0 20px;
         border-top: 1px solid $white;
-        text-shadow: 2px 1px 1px black;
+        text-shadow: 1px 1px 1px $black;
+        background: linear-gradient(170deg,cadetblue, #262626 );
     }
     li:last-child {
         border-bottom: 1px solid $white;
@@ -175,9 +175,16 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 10vh;
-    padding: 20px 0;
-    // background: black;
+    min-height: 10vh;
+    padding: 0px 0 10px;
+    h2 {
+        text-transform: uppercase;
+        margin-top: 10px;
+        font-size: 1.25em;
+        span {
+            color: gray;
+        }
+    }
     .divider {
         width: 75%;
         height: 10px;
@@ -196,5 +203,5 @@ footer {
     background-color: tomato;
 }
 .complete {
-    background-color: $completed;
+    background: linear-gradient(175deg, $completed, $black 75%);
 }
